@@ -8,7 +8,11 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.addFiles('chart.js', 'client');
+  api.use('templating', 'client');
+  api.addFiles([
+    'canvas.html',
+    'chart.js'
+  ], 'client');
 
   api.export('Chart', 'client');
 });
